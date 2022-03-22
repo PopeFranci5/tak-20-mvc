@@ -17,7 +17,17 @@
     
     <ul>
         <?php foreach ( $tasks as $task ) : ?>
-            <li><?= $task->description; ?></li>
+            
+            <?php if ( $task->isComplete() ) : ?>
+                <strike>
+            <?php endif; ?>
+
+                <li><?= $task->description; ?></li>
+
+            <?php if ( $task->isComplete() ) : ?>
+                </strike>
+            <?php endif; ?>
+
         <?php endforeach; ?>
     </ul>
 

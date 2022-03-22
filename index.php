@@ -1,27 +1,10 @@
 <?php
 
-class Task {
-    public $description;
-    protected $completed = false;
+require_once 'functions.php';
+require_once 'Task.php';
 
-    public function __construct ( $desc ) {
-        $this->description = $desc;
-    }
+$pdo = connectToDb();
 
-    public function complete () {
-        $this->completed = true;
-    }
-
-    public function isComplete () {
-        return $this->completed;
-    }
-
-}
-
-$tasks = [
-    new Task('Vaja käia poes'),
-    new Task('Täida päevikud'),
-    new Task('Osale rohekiirendis')
-];
+$tasks = fetchAllTasks($pdo);
 
 require_once 'index.view.php';
