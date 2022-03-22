@@ -1,10 +1,12 @@
 <?php
 
-require_once 'functions.php';
+require_once 'database/Connection.php';
+require_once 'database/QueryBuilder.php';
 require_once 'Task.php';
 
-$pdo = connectToDb();
+$pdo = Connection::make();
+$query = new QueryBuilder($pdo);
 
-$tasks = fetchAllTasks($pdo);
+$tasks = $query->selectAll('todos');
 
 require_once 'index.view.php';

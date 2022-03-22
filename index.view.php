@@ -18,13 +18,13 @@
     <ul>
         <?php foreach ( $tasks as $task ) : ?>
             
-            <?php if ( $task->isComplete() ) : ?>
+            <?php if ( $task->completed ) : ?>
                 <strike>
             <?php endif; ?>
 
                 <li><?= $task->description; ?></li>
 
-            <?php if ( $task->isComplete() ) : ?>
+            <?php if ( $task->completed ) : ?>
                 </strike>
             <?php endif; ?>
 
