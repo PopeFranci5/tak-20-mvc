@@ -4,3 +4,6 @@ CREATE TABLE `todos` (
   `completed` tinyint(4) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+INSERT INTO `todos`
+(`description`) VALUES ('asdf');
