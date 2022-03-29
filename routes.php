@@ -1,12 +1,12 @@
 <?php
 
-$router->define([
+/* $router->define([
     '' => 'controllers/index.php',
     'about' => 'controllers/about.php',
     'about/culture' => 'controllers/about-culture.php',
     'contact' => 'controllers/contact.php',
     'location' => 'controllers/add-location.php'
-]);
+]); */
 
 $router->get('', 'controllers/index.php');
 $router->get('about', 'controllers/about.php');

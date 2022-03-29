@@ -10,17 +10,9 @@
 
 
 <ul>
-    <?php foreach ( $tasks as $task ) : ?>
+    <?php foreach ( $locations as $l ) : ?>
         
-        <?php if ( $task->completed ) : ?>
-            <strike>
-        <?php endif; ?>
-
-            <li><?= $task->description; ?></li>
-
-        <?php if ( $task->completed ) : ?>
-            </strike>
-        <?php endif; ?>
+    <li><?= $l->location; ?></li>
 
     <?php endforeach; ?>
 </ul>
