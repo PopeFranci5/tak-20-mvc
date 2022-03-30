@@ -1,6 +1,6 @@
 <?php
 
-$app['database']->insert('locations', [
+App::get('database')->insert('locations', [
     'location' => $_POST['location'],
 ]);
 
